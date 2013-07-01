@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/custom/custom.css" />
+        <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/libs/fastclick.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/libs/pageslider.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/sportland.js"></script>
+        <script type="text/javascript" charset="utf-8">
+                        if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)){
+                            document.write('<script type="text/javascript" src="js/libs/ios/cordova.ios.js"><\/script>');
+                            $(window).load(function() {
+                            document.addEventListener("deviceready", function(){
+
+
+
+                                           Sportland.init("ios");
+
+                                           }, false);
+                                           });
+                        }
+                        else if (!navigator.userAgent.match(/Mac OS X|Windows NT/)) {
+                            document.write('<script type="text/javascript" src="js/libs/android/cordova.js"><\/script>');
+                            $(window).load(function() {
+                            document.addEventListener("deviceready", function(){
+
+                                           Sportland.init("android");
+
+                                            }, false);});
+                        }
+
+                        </script>
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <div data-role="page" id="home">
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <h1 class="ui-title-long page-title">Title</h1>
+
+            </div>
+            <div data-role="content" data-theme="a" class="cont">
+                <div id="page1" class="page">hello
+                    <a href="#page2"><strong>Build Bot</strong></a>
+                </div>
+                <div id="page2" class="page">
+                    <a href="#page1"><strong>Build Bot2</strong></a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
